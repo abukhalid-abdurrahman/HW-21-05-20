@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Person>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Список Людей</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <td>Имя</td>
+                <td>Фамилия</td>
+                <td>Отчество</td>
+            </tr>
+        @foreach (var person in Model)
+        {
+            <tr>
+                <td>@person.LastName</td>
+                <td>@person.FirstName</td>
+                <td>@person.MiddleName</td>
+            </tr>
+        }
+        </table>
+</body>
+</html>
